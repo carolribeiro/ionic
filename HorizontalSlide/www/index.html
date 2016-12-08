@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+
+    <!-- compiled css output -->
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter" ng-controller="MainCtrl">
+      <ion-pane>
+        <ion-header-bar class="bar-stable">
+          <h1 class="title">Events</h1>
+        </ion-header-bar>
+        <ion-content scroll="false">
+
+          <div class="item item-divider">
+            Free Scroll
+            <span class="item-note">
+              More
+            </span>
+          </div>
+
+          <ion-scroll direction="x" class="horizontal-scroll padding" ng-controller="FirstCtrl">
+            <button class="button button-positive button-large" ng-click="broadcast(&apos;Ionic&apos;)">
+              <i class="icon ion-ionic"></i>
+            </button> 
+            <button class="button button-calm button-large" ng-click="broadcast(&apos;Twitter&apos;)">
+              <i class="icon ion-social-twitter"></i>
+            </button> 
+            <button class="button button-balanced button-large" ng-click="broadcast(&apos;Facebook&apos;)">
+              <i class="icon ion-social-facebook"></i>
+            </button> 
+            <button class="button button-energized button-large" ng-click="broadcast(&apos;Googleplus&apos;)">
+              <i class="icon ion-social-googleplus"></i>
+            </button> 
+            <button class="button button-assertive button-large" ng-click="broadcast(&apos;Dribbble&apos;)">
+              <i class="icon ion-social-dribbble"></i>
+            </button>
+            <button class="button button-royal button-large" ng-click="broadcast(&apos;Octocat&apos;)">
+              <i class="icon ion-social-octocat"></i>
+            </button>
+            <button class="button button-dark button-large" ng-click="broadcast(&apos;Instagram&apos;)">
+              <i class="icon ion-social-instagram"></i>
+            </button> 
+          </ion-scroll>
+
+          <div class="item item-divider">
+            Slide-by-Slide Scroll
+            <span class="item-note">
+              More
+            </span>
+          </div>
+
+          <div ng-controller="SecondCtrl">
+            <ion-slide-box show-pager="false">
+              <ion-slide class="padding">
+                <button class="button button-block button-positive" ng-click="changeMyData(&apos;POSITIVE&apos;)">
+                  POSITIVE
+                </button>
+              </ion-slide>
+              <ion-slide class="padding">
+                <button class="button button-block button-calm" ng-click="changeMyData(&apos;CALM&apos;)">
+                  CALM
+                </button>
+              </ion-slide>
+              <ion-slide class="padding">
+                <button class="button button-block button-balanced" ng-click="changeMyData(&apos;BALANCED&apos;)">
+                  BALANCED
+                </button>
+              </ion-slide>
+            </ion-slide-box>
+          </div>
+
+          <div class="item item-divider">
+            Logs
+          </div>
+
+          <div ng-controller="ThirdCtrl">
+            <ul class="list">
+              <li class="item">
+                <b>myEvent </b> {{ display.value }}
+              </li>
+              <li class="item">
+                <b>myData </b> <my-directive data="myData"></my-directive>
+              </li>
+            </ul>
+          </div>
+          
+        </ion-content>
+      </ion-pane>
+  </body>
+  
+</html>

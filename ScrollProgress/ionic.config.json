@@ -1,0 +1,13 @@
+{
+  "name": "ScrollProgress",
+  "app_id": "817cbec8",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

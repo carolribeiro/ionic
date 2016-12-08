@@ -1,0 +1,13 @@
+{
+  "name": "Intro",
+  "app_id": "17d575c7",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}

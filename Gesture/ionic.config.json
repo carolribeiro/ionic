@@ -1,0 +1,13 @@
+{
+  "name": "Gesture",
+  "app_id": "e35e0d4a",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ]
+}
